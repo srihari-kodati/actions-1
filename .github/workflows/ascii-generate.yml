@@ -1,4 +1,4 @@
-name: Generate ASCII Artwork
+name: ASCII_Script
 
 on: [push]
 
