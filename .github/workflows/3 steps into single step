@@ -1,4 +1,4 @@
-name: Msecond-workflow
+name: second-workflow
 
 on: [push]
 
