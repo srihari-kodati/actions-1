@@ -14,5 +14,5 @@ jobs:
 
         - name: Executing Shell Script
           run: |
-            chmod +x ascii-script.sh
+            chmod +x srihari-kodati/actions-1/.github/workflows/ ascii-script.sh
             ./srihari-kodati/actions-1/.github/workflows/ ascii-script.sh
