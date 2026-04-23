@@ -1,19 +1,18 @@
 name: Multiple Jobs
 
-on: [push]
+on: 
+  push
 
 jobs: 
     build_job_1:
         runs-on: ubuntu-latest
-        steps:
-        - name: Checkout Repo
-          uses: actions/checkout@v6
-          
+        steps:          
         - name: Install Cowsay Program
           run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay CMD
           run: cowsay -f dragon "Run for cover, I'm a DRAGON ... RAWR" >> dragon.txt
+        
         - name: Sleep for 30 seconds
           run: Sleep 30
 
