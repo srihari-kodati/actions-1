@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ vars.DOCKER_USERNAME }}/my-repo:latest .
+          docker build -t ${{ vars.DOCKER_USERNAME }}/my-repo:latest -f docker/Dockerfile .
 
       - name: Push Docker image
         run: |
