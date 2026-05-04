@@ -19,10 +19,10 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ${{ vars.DOCKERHUB_USERNAME }}/my-repo:latest .
+          docker build -t ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML .
 
       - name: Push image
         run: |
-          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:latest
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML
 
               
