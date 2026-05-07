@@ -35,12 +35,12 @@ jobs:
       # Pull image from DockerHub
       - name: Pull DockerHub image
         run: |
-          docker pull srihari95/my-repo:YAML
+          docker pull srihari95/my-repo:docker_image
 
       # Tag image for ECR
       - name: Tag image
         run: |
-          docker tag srihari95/my-repo:YAML \
+          docker tag srihari95/my-repo:docker_image \
           ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:${{ github.sha }}
 
       # Push image to ECR
