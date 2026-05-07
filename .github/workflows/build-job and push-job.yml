@@ -48,8 +48,8 @@ jobs:
 
       - name: Tag image
         run: |
-          docker tag my-app-image:latest ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML
+          docker tag my-app-image:latest ${{ vars.DOCKERHUB_USERNAME }}/my-repo:docker_image
 
       - name: Push image
         run: |
-          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:docker_image
