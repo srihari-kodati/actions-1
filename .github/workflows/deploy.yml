@@ -1,15 +1,15 @@
 name: Deploy to ECS
 
 on: 
-  push
+  workflow_dispatch
    
-env:
-  AWS_REGION: ${{ vars.AWS_REGION }}
-  ECR_REPOSITORY: my-app
-  ECS_SERVICE: my-service
-  ECS_CLUSTER: my-cluster
-  ECS_TASK_DEFINITION: task-definition.json
-  CONTAINER_NAME: my-container
+# env:
+#   AWS_REGION: ${{ vars.AWS_REGION }}
+#   ECR_REPOSITORY: my-app
+#   ECS_SERVICE: my-service
+#   ECS_CLUSTER: my-cluster
+#   ECS_TASK_DEFINITION: task-definition.json
+#   CONTAINER_NAME: my-container
 
 jobs:
   deploy:
