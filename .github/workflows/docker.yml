@@ -1,7 +1,7 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Image(Single Job)
 
 on:
-  push
+  workflow_dispatch
 
 jobs:
   build-and-push:
