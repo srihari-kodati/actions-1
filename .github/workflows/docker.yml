@@ -19,10 +19,10 @@ jobs:
 
       - name: Build image
         run: |
-          docker build -t ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML .
+          docker build -t ${{ vars.DOCKERHUB_USERNAME }}/my-repo:AWS-ECS .
 
       - name: Push image
         run: |
-          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:YAML
+          docker push ${{ vars.DOCKERHUB_USERNAME }}/my-repo:AWS-ECS
 
               

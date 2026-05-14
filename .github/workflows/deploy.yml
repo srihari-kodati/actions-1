@@ -35,12 +35,12 @@ jobs:
       # Pull image from DockerHub
       - name: Pull DockerHub image
         run: |
-          docker pull srihari95/my-repo:docker_image
+          docker pull ${{ vars.DOCKERHUB_USERNAME }}/my-repo:AWS-ECS
 
       # Tag image for ECR (This allows Docker to push images into ECR)
       - name: Tag image
         run: |
-          docker tag srihari95/my-repo:docker_image \
+          docker tag ${{ vars.DOCKERHUB_USERNAME }}/my-repo:AWS-ECS \
           ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPOSITORY }}:${{ github.sha }}    # 123456789.dkr.ecr.us-east-1.amazonaws.com/my-app:a1b2c3
 
       # Push the tagged image to Amazon ECR
