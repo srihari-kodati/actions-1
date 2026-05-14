@@ -8,7 +8,7 @@
   "containerDefinitions": [
     {
       "name": "my-container",
-      "image": "nginx",
+      "image": "nginx",     # "image": "123456789.dkr.ecr.us-east-1.amazonaws.com/my-app:a1b2c3"
       "essential": true,
       "portMappings": [
         {
